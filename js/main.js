@@ -39,12 +39,10 @@ createApp({
   },
 
   methods: {
-    printHello() {
-      console.log("hello vue");
+    deleteTask(i) {
+      this.tasks.splice(i, 1);
     },
   },
 
-  mounted() {
-    this.printHello();
-  },
+  mounted() {},
 }).mount("#app");
