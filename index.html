@@ -35,9 +35,14 @@
     <div id="app">
       <div class="container">
         <h1>{{ title }}</h1>
+        <h2>Aggiungi prodotto nella lista</h2>
+        <input v-model.trim="newTask.text" type="text" class="form-control" />
+        <button @click="saveNewTask()" class="btn btn-success my-2">
+          <i class="fa-solid fa-plus me-2"></i>Aggiungi
+        </button>
         <h3>Lista della spesa</h3>
         <ul class="p-0">
-          <li v-for="(task, index) in tasks" class="task p-3 mb-3">
+          <li v-for="(task, index) in tasks" class="task p-3 mb-3 fs-5">
             <div v-if="task.done" class="text-decoration-line-through">
               {{task.text}}
             </div>
