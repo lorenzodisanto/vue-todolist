@@ -13,6 +13,14 @@ li {
   justify-content: space-between;
 }
 
+li div {
+  cursor: pointer;
+}
+
+li div:hover {
+  color: red;
+}
+
 .delete {
   border: 1px solid black;
   display: flex;
@@ -22,9 +30,8 @@ li {
   border-radius: 10px;
   width: 30px;
   height: 30px;
-  cursor: pointer;
 }
 
 .delete:hover {
-  background-color: red;
+  border: 2px solid red;
 }
