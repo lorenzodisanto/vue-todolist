@@ -36,7 +36,12 @@
       <div class="container">
         <h1>{{ title }}</h1>
         <h2>Aggiungi prodotto nella lista</h2>
-        <input v-model.trim="newTask.text" type="text" class="form-control" />
+        <input
+          v-model.trim="newTask.text"
+          @keyUp.enter="saveNewTask()"
+          type="text"
+          class="form-control"
+        />
         <button @click="saveNewTask()" class="btn btn-success my-2">
           <i class="fa-solid fa-plus me-2"></i>Aggiungi
         </button>
