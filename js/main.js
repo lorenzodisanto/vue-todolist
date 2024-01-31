@@ -35,12 +35,28 @@ createApp({
           done: false,
         },
       ],
+
+      newTask: [
+        {
+          text: "",
+          done: false,
+        },
+      ],
     };
   },
 
   methods: {
     deleteTask(i) {
       this.tasks.splice(i, 1);
+    },
+
+    saveNewTask() {
+      const newTaskCopy = { ...this.newTask };
+      if (!newTaskCopy.text) {
+        alert("Non hai inserito il prodotto");
+        return;
+      }
+      this.tasks.push(newTaskCopy);
     },
   },
 
