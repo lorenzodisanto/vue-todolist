@@ -7,3 +7,24 @@ ul {
   border-radius: 10px;
   width: 400px;
 }
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: red;
+}
