@@ -58,6 +58,14 @@ createApp({
       }
       this.tasks.push(newTaskCopy);
     },
+
+    ChangeDone(task) {
+      if (task.done) {
+        task.done = false;
+      } else {
+        task.done = true;
+      }
+    },
   },
 
   mounted() {},
