@@ -26,6 +26,15 @@
     <div id="app">
       <div class="container">
         <h1>{{ title }}</h1>
+        <h3>Lista della spesa</h3>
+        <ul class="p-0">
+          <li v-for="task in tasks" class="task p-3 mb-3">
+            <div v-if="task.done" class="text-decoration-line-through">
+              {{task.text}}
+            </div>
+            <div v-else>{{task.text}}</div>
+          </li>
+        </ul>
       </div>
     </div>
     <!-- JS Bootstrap -->
